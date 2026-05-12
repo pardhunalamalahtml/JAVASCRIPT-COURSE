@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Built-in-objects</title>
+  </head>
+  <body>
+    <script>
+      //There are two more of build-in-objects 1)JSON 2)Local storage
+      //JSON-Javascript object notation similar to javascript object but has less features
+      let power={
+        name:'shirt',
+        'delivery-time':'1day',
+        rating:{
+          stars:8.7,
+          count:95
+        },
+      };
+      console.log(power);
+      //JSON
+      let power1 ={
+        "name":"shirt",
+        "delivery":"1-day",
+        "rating":{
+          "stars":9.2,
+          "count":99
+        },
+      };
+      console.log(power1);
+      //the difference is that all properties&strings must use double quotes in JSON it doesn't support single quotes.it doesn't support functions.
+      console.log(JSON.stringify(power1));
+      //why we use JSON-When we send data between computers,when we store data
+      const jsonString = JSON.stringify(power1);
+      console.log(JSON.parse(jsonString));
+      //convert:Javascript Object <-> JSON
+      //local storage
+      //variables are temporary if we refresh/close the page,all variables are deleted.
+      console.log('Hello'.length);
+      console.log('hello'.toUpperCase());
+      //Here hello is a special object is called autoboxing.
+
+
+    </script>
+  </body>
+</html>

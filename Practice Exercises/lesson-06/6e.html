@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6e Exercise</title>
+</head>
+<body>
+  <script>
+    let age=70;
+    let user="SambaSiva Rao";
+    const isHoilday=true;
+    //&& has a higher priority than || so for
+    //this to work correctly,we need to add
+    //brackets () around the || check to make
+    //sure that it gets done first.
+    if((age<=6 || age>=65) && isHoilday===true)
+    {
+      console.log(`Discount is available for you sir ${user}`);
+    }
+    else
+    {
+      console.log(`Sorry Discount is not available for you sir ${user}`);
+    }
+  </script>
+</body>
+</html>

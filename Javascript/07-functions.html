@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <script>
+      // Function syntax: function funtion_name{ function statements } calling the function below function_name();
+      function pardhu()
+      {
+        console.log("Pardhu");
+        console.log("18 Years old");
+      }
+      pardhu();
+      pardhu();
+      //scope(review)-Limits where a variable exists
+      function calculateTax()
+      {
+        console.log(1000*0.1);
+      }
+      calculateTax();
+      //parameter=puts a value into a function Rules=> for parameter names => same as the variable "passing the value into the function argument"
+      //there can be more than one parameter in the function argument
+      function calculateTax1(parameter)
+      {
+        console.log(parameter*0.1);                
+      }
+      calculateTax1(5000);
+      calculateTax1(7000);
+      function calculateTax2(cost,taxpercent)
+      {
+        console.log(cost*taxpercent);
+      }
+      calculateTax2(2000,0.2);
+      calculateTax2(10000,0.3);
+      calculateTax2(6500,0.35); 
+    </script>
+  </body>
+</html>

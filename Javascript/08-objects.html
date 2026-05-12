@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <script>
+      // objects are like structure in c that stores the more than one different datatypes like interger,float,strings etc...
+      //accessing the value is same as the structue object_name.property to get the value stored in that property
+      //object syntax => variable object_name (It will be opened with curled braces and end with curley braces).
+      //{ 
+      //  property:value,
+      //  property1:value,
+      //  propertyn:nvalue 
+      //};
+     /* const product = {
+        name:'Socks',
+        price:1100
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+      console.log(product.price);
+      product.name='Cotton Socks';
+      console.log(product);
+      delete product.name;
+      console.log(product);
+      //An object is an another type of value
+      console.log(typeof(product)); */
+      //why we use objects =>i)make our code more organised
+      //ii)let us group&use multiple value together
+      //there are two types of notations shorter & easier
+      //-use dot notation by default 
+      //-for properties that don't work,use bracket notation
+      //Bracket notation -lets us use properties that don't work with dot notation
+      /* const product2=
+      {
+        name:'shirt',
+        ['delivery-time']:'1day'
+      };
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      // Nested objects (we can also use function inside a object)
+      // Nested objects are same as nested structures we can use another object inside that object
+      // syntax => variable main_object = {
+      // another sub_object:{
+      //             property:value,
+      //             property(n):value(n)
+      //             },
+      //  };
+      // we can access by main_object.sub_object.property that we want to access that value
+      const product3 =
+      {
+        rating:
+        {
+          stars:4.5,
+          count:90
+        },
+        fun:function easygame(){
+          console.log("Function inside a object");
+        }
+      };
+      console.log(product3.rating.count);
+      console.log(product3.rating.stars);
+      product3.fun();
+      // ** when we save the functions inside an object this is called a method
+      console.log(typeof(console));
+      console.log(typeof(console.log)); */
+      // console.log(typeof(easygame()));
+      //Objects are refrences
+      const object1={
+        message:'hello'
+      };
+      //it was stored in the computer's memory.Here hello is the reference
+      const object2=object1;
+      //javascript just copies references to copy code.It is called copy by reference
+      object1.message="Good Job!";
+      console.log(object1);
+      console.log(object2);
+      const object3={
+        message:"Good Job!"
+      }
+      console.log(object1==object3);
+      //these code compares the references,not the values
+      //object1 has different reference then it is displays false
+      console.log(object2==object1);
+      const object4 = {
+        message:"Good Job!",
+        price:90
+      };
+      //const message=oject4.message;
+      const {message,price}=object4;//=>This is called destructing easier way to take properties out of an object
+      console.log(object4.message);
+      console.log(object4.price);
+      //Shorthand Method
+      const object5={
+        //message : message
+        message,
+        /*method:function function1() {
+          console.log('method');
+        }*/ //This is called shorthad method
+        method () {
+          console.log('method');
+        }
+      };
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>

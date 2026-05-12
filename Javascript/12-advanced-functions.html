@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button onclick="" class="js-button">Click</button>
+    <script>
+      //Another function .addEventListener()
+      /* const buttonElement=document.querySelector('.js-button');
+      const eventListener=()=>{
+      console.log('click1');
+      }
+      buttonElement.addEventListener('click',eventListener);
+      buttonElement.addEventListener('click',()=>{
+      console.log('click1');
+      });
+      //does same functionality as on click attribute
+      //1.Multiple event Listeners
+      //2.We can remove an event listener by using .removeEventListener()
+      buttonElement.removeEventListener('click',eventListener);  */
+      //best practice is Use.addEventListener() instead of onclick="..."
+      /* function greeting(){
+        console.log('hello');
+      }
+      greeting();
+      const num=2;
+      const function1=function greeting(){
+        console.log('hello2');
+      }
+      console.log(function1);
+      console.log(typeof(function1));
+      //what else we can do with a value? -save a value in an object -pass a value into a function 1.Easier to read 2.Hoisting
+      const object1={
+        num:2,
+        fun:function(){
+          let no=40;
+          if(no%2===0){
+            console.log('Even number');
+          }
+          else{
+            console.log('Odd number');
+          }
+        }
+      }
+      object1.fun();
+      object1.num; 
+      function display(param){
+        console.log(param);
+      }
+      display(49); 
+      function run(param){
+        param();
+      }
+      run(function(){
+        console.log('hello3');
+      }); */
+      //setTimeout()-allows us to run a function in the future
+      //setTimeout(function(){
+      //  console.log('timeout');
+      //  console.log('next line');
+      //},3000);
+      //here 1 first parameter is the funtion and 2 parameter is how long to wait before running this function
+      // it's a number is milliseconds =>1000milliseconds=1 second
+      //Asynchronous code->won't wait for a line to finish before going to next line.
+      //synchronous code->will wait for one line to finish before going to next line.
+      //Advantage->it doesn't block our code for 3 seconds waiting for this timer to finish
+      //setInterval()//=>it is also a inbuild function with 2 parameters 1.A function we want to run in the future 2.time that we want to every time
+      /*setInterval( function() {
+        console.log('interval');
+        console.log('next line');
+      },3000); */
+      //it will keep running the function every 3 seconds
+      //another way to loop through an array
+      /*a=[
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value){
+        console.log(value);
+      });//forEach is the another method for the looping
+      a=[1,2,3];
+      for(let i=0;i<a.length;i++){
+        console.log(a[i]);
+      }*/
+      /*[
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value,index){
+        //if value is 'wash dishes',we're going to skip it.
+        if(value==='wash dishes'){
+          return;
+        }
+        console.log(index);
+        console.log(value);
+      });*/
+      //if we need to use break; then it's better to use a regular for loop
+      //Arrow Functions
+      /*const regularFunction=function(param,param2){
+        console.log('hello');
+      }
+      const arrowFunction=(param,param2)=>{
+        console.log('hello');
+        return 5;
+      };
+      arrowFunction();
+      //arrow functions have shortcuts
+      const oneParam=param=>{
+        console.log(param+1);
+      };
+      oneParam(5);
+      const oneLine=()=>2+3;
+      console.log(oneLine());
+      //shorter way of writing a regular function
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach((value,index)=>{
+        //if value is 'wash dishes',we're going to skip it.
+        if(value==='wash dishes'){
+          return;
+        }
+        console.log(index,value);
+      }); */
+      /* Two more array methods are i).filter() ii).map()
+      .filter()=>[1,-3,5]->[1,5] negative numbers removed*/
+      //console.log([1,-4,5].filter((value,index)=>
+      //{
+        /* if(value>=0){
+          return true;
+        }
+        else{
+          return false;
+        }
+         */
+      //   return value>=0;
+      // }));
+      //1.creates a new array[] 2.return true,=>put value in array 3.return false,=>not put value in array
+      //.map()=>1.Creates a new array[] 2.Whatever we return =>added to new array
+      //console.log([1,1,3].map((value,index)=>{
+        // return Math.pow(value,2);
+        //return value+10;
+        //return value * 2;
+      //}));
+      //shortcut for the above code
+      //console.log([1,1,3].map(value=>value * 2
+        // return Math.pow(value,2);
+        // return value+10;
+      //));
+      //Closure
+      //if a function has access to a value
+      //it will always have access to that value
+      
+
+
+
+      
+
+    </script>
+  </body>
+</html>

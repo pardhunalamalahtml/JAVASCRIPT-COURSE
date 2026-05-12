@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons</title>
+</head>
+<style>
+  .one
+  {
+    background-color:yellow;
+  }
+  .two
+  {
+    background-color:orange;
+  }
+  .one:hover
+  {
+    cursor:pointer;
+  }
+  .two:hover
+  {
+    cursor:pointer;
+  }
+</style>
+<body>
+  <p class="three">
+    Adults Plain Cotton T-shirt
+  </p>
+  <p class="four">
+    price:$7.99
+  </p>
+  <button onclick="add();" class="one">
+    Add to cart
+  </button>
+  <button onclick="buy();" class="two">
+    Buy now
+  </button>
+  <script>
+    alert("Welcome!");
+    function add()
+    {
+      alert("Added.");
+    }
+    function buy()
+    {
+      console.log("Loading...");
+      alert("Purchased.");
+    }
+  </script>
+</body>
+</html>

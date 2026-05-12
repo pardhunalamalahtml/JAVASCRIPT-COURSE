@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <style>
+      body
+      {
+        font-family:Arial;
+      }
+      .todo-input-grid,
+      .todo-grid
+      {
+        display:grid;
+        grid-template-columns:200px 150px 100px;
+        align-items:center;
+        column-gap:15px;
+        row-gap:15px;
+      }
+      .todo-input-grid
+      {
+        align-items:stretch;
+        margin-bottom:10px;
+      }
+      .name-input,
+      .dueDate-input
+      {
+        font-size:15px;
+        padding:6px;
+      }
+      .js-date-input
+      {
+        font-size:15px;
+        padding:6px;
+      }
+      .add-todo-button
+      {
+        background-color:green;
+        border:none;
+        color:white;
+        font-size:15px;
+        cursor:pointer;
+        /*padding-top:10px;
+        padding-bottom:10px;
+        padding-left:40px;
+        padding-right:40px;
+        text-align:center; */
+      }
+      .delete-todo-button
+      {
+        background-color:darkred;
+        color:white;
+        border:none;
+        font-size:15px;
+        cursor:pointer;
+        padding-top:10px;
+        padding-bottom:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Todo List</p>
+    <div class="todo-input-grid">
+    <input class="js-name-input name-input" placeholder="Todo name">
+    <input type="date" class="js-date-input dueDate-input">
+    <button onclick="addTodo();" class="add-todo-button">Add</button></div>
+    <div class="js-todo-list todo-grid"></div>
+    <!--Steps  1.Create array to 2.when we click add 3.Get text from 4.Add it to array 5.console.log() the array-->
+    <script>
+      const todoList=[{
+        name:'make dinner',
+        dueDate:'2022-12-22'}
+        ,{
+        name:'wash dishes',
+        dueDate:'2022-12-22',
+        }];
+      renderTodoList(); 
+      function renderTodoList(){
+        let todoListHTML = '';
+        for(let i=0;i<todoList.length;i++){
+          const todoObject=todoList[i];
+          //const name=todoList.name;
+          //const dueDate=todoList.dueDate;
+          const {name,dueDate}=todoObject;
+          const html = `
+            <div>${name}</div>
+            <div>${dueDate}</div>
+            <button class="delete-todo-button" onclick="
+            todoList.splice(${i},1);
+            renderTodoList();
+            ";>Delete</button>
+          `;//Generating the HTML
+          todoListHTML+=html;
+        }
+        console.log(todoListHTML);
+        document.querySelector('.js-todo-list').innerHTML=todoListHTML;
+    }
+      function addTodo(){
+        if('js-input-name==="NULL"')
+        {
+          alert('Please enter the name of the todo list');
+        }
+        let inputElement=document.querySelector('.js-name-input');
+        let name=inputElement.value;
+        const dateInputElement=document.querySelector('.js-date-input');
+        const dueDate=dateInputElement.value;
+        todoList.push({
+          // name:name,
+          // dueDate:dueDate,
+          name,
+          dueDate
+        });
+        console.log(todoList);
+        inputElement.value='';
+        renderTodoList();        
+      }
+      //Main idea of javascript
+      //save the data 
+      //generate the HTML
+      //make it interactive
+    </script>
+  </body>
+</html>

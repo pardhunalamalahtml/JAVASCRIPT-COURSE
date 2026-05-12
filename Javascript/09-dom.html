@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Modal</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <!--  built in objects(objects provided by javascript)-->
+    <!-- <button>
+      hello
+    </button>
+    <p>Powerful People come from powerful places history was wrong powerful people make the places powerful</p> -->
+    <button>Hello</button>
+    <button class="js-button">
+      Second Button
+    </button>
+
+    <script>
+    // document.body.innerHTML='hello';
+    // here document is object and it's property is body and body is object and it property is innerHTML
+    // these innerHTML removes everything on page and displays hello 
+    // document.title='Good Job!';
+    // these will change the title property it will also change the title at the top of the tabs here and says good job.
+    // console.log(document.title);
+    // document.title='changed';
+    // console.log(document.body);
+    // the html element is converted into a javascript object 
+    // we can have HTML element inside javascript
+    // The DOM combines Javascript and HTML together
+    // console.log(typeof(document.body));
+    // It is an object
+    // console.log(document.body.innerHTML);
+    // Displays all the body
+    // document.body.innerHTML='Body code has changed';
+    // Changes all of the HTML code and replaces with changed
+    // we can also create a new html code in innerHTML
+    // document.body.innerHTML='<button>Good Job!</button>';
+    // ** Method= function saved inside an object
+    // *document.querySelector()-lets us get any element from the page and put it inside javascript
+    // console.log(document.querySelector('button'));
+    // Every HTML element has property .innerHTML
+    // console.log(document.querySelector('button').innerHTML);
+    // document.querySelector('button').innerHTML='Changed';
+    // console.log(document.querySelector('button').innerHTML);
+    console.log(document.querySelector('.js-button'));
+    // we can access any button by giving it class attribute,displays second button in the console
+    const buttonElement=document.querySelector('.js-button');
+    console.log(buttonElement);
+    // DOM combines JS and HTML together full control of the webpage 
+    
+  </script>
+  </body>
+</html>
