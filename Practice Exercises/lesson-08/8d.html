@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8d Exercise</title>
+</head>
+<body>
+  <script>
+    function comparePrice(product1,product2){
+      if(product1.price>product2.price){
+        return product2.name;
+      }
+      else
+      {
+        return product1.name;
+      }
+    }
+    const product1={
+      'name':'Product one',
+      'price':200
+    };
+    const product2={
+      'name':'product two',
+      'price':300
+    };
+    let result=comparePrice(product1,product2)
+      console.log(result);
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7g Exercise</title>
+</head>
+<body>
+  <script>
+    function convertLength(length,from,to){
+      if(to==='miles' && from==='miles' || to==='km' && from==='km'){
+        return `${length}${to}`;
+      }
+      else if(from==='miles' && to==='km'){
+        const miles=(1.6*length);
+        return `${miles} km`;
+      }
+      else if(from==='km' && to==='miles'){
+        const km=(0.625*length);
+        return `${km} miles`;
+      }
+    }
+    console.log(convertLength(50,'miles','km'));
+    console.log(convertLength(32,'km','miles'));
+    console.log(convertLength(50,'km','km'));
+  </script>
+</body>
+</html>

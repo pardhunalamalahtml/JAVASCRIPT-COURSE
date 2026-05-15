@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6l Exercise</title>
+</head>
+<body>
+  <button class="one">
+    Show quantity
+  </button>
+  <button onclick="
+    updateCartQuantity(1);
+   " class="two">
+    Add to cart
+  </button>
+  <button onclick="
+  updateCartQuantity(2); " class="three">
+    +2  
+  </button>
+  <button onclick="
+  updateCartQuantity(3); " class="four">
+    +3  
+  </button>
+  <button onclick="
+  updateCartQuantity(4); " class="five">
+    +4  
+  </button>
+  <button onclick="
+  updateCartQuantity(5); " class="six">
+    +5  
+  </button>
+  <button onclick="
+  updateCartQuantity(0);
+  console.log('Cart was reset.');" class="reset">
+    reset
+  </button>
+  <button onclick="
+  updateCartQuantity(-1);
+  " class="remove">
+    Remove from cart
+  </button>
+  <button onclick="
+  updateCartQuantity(-2);
+  " class="seven">
+    -2
+  </button>
+  <button onclick="
+  updateCartQuantity(-3);
+  " class="eight">
+    -3
+  </button>
+  <script>
+    let cartQuantity=0;
+    function updateCartQuantity(change){
+      if(cartQuantity+change>10){
+      alert('The cart is full');
+    }else if(cartQuantity+change<0){
+      alert('Not enough items in the cart');
+    }else{
+      cartQuantity+=change;
+      console.log(`cart quantity:${cartQuantity}`);
+    }
+  }
+  </script>
+</body>
+</html>
